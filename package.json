@@ -10,12 +10,19 @@
     "@types/node": "^12.12.68",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "autoprefixer": "^9.8.6",
+    "moment": "^2.29.1",
+    "postcss-cli": "^8.1.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3",
-    "typescript": "^3.7.5"
+    "tailwindcss": "^1.9.5",
+    "typescript": "^3.9.7"
   },
   "scripts": {
+    "build:css": "postcss src/style/tailwind.css -o scr/style/main.css",
+    "prestart": "npm run build:css",
+    "prebuild": "npm run build:css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
